@@ -7,9 +7,11 @@ def read_file():
     file_check.close()
     check(contents)
 def check(text_to_check):
-    connection = urllib.request.urlopen("http://www.wdylike.appspot.com/?q="+text_to_check)
+    connection1 = urllib.request.urlopen("http://www.wdylike.appspot.com/?q="+text_to_check)
     #urllib is a module used to read data from the internet and urlopen is a function present in urllib module
     #http://www.wdylike.appspot.com/?q=shot is a site developed by google to check profanity
+        connection = urllib.request.urlopen(connection1)
+
     response = connection.read()
     #print(response)
     connection.close()
